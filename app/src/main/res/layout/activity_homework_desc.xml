@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar"
+                android:fillViewport="false"
+                android:id="@+id/scrollView1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+            <!--Homework Status-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:padding="8dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/linearLayout2"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cv2"
+                    card_view:cardElevation="2dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_homework_caption"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Homework"
+                            android:layout_alignParentTop="true"
+                            android:textColor="@color/black_color"
+                            android:padding="10dp" />
+
+                        <include
+                            layout="@layout/item_divider"
+                            android:layout_height="1dp"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/txt_homework_caption"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/include2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Not Evaluated"
+                            android:id="@+id/txt_circular_status"
+                            android:layout_below="@+id/txt_homework_caption"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/material_blue_grey_80"
+                            android:padding="10dp"/>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+            <!--Homework Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:padding="8dp"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/linearLayout1"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cv"
+                    card_view:cardElevation="2dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_details"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Details"
+                            android:layout_alignParentTop="true"
+                            android:textColor="@color/black_color"
+                            android:padding="10dp" />
+
+                        <include
+                            layout="@layout/item_divider"
+                            android:layout_height="1dp"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/txt_details"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Please kindly approve my leaves because i am suffering from fever from last two days. And doctor suggested me to do rest at hom only."
+                            android:id="@+id/txt_homework_details"
+                            android:layout_below="@+id/txt_details"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/material_blue_grey_80"
+                            android:padding="10dp"
+                            android:typeface="serif"
+                            android:minLines="1"
+                            android:maxLines="4"/>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+
+
+            <!--Other Information-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:padding="8dp"
+                android:layout_below="@+id/linearLayout1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/linearLayout3"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cv3"
+                    card_view:cardElevation="2dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_details3"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Other Information"
+                            android:layout_alignParentTop="true"
+                            android:textColor="@color/black_color"
+                            android:padding="10dp" />
+
+                        <include
+                            layout="@layout/item_divider"
+                            android:layout_height="1dp"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/txt_details3"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/include3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Start Date"
+                            android:id="@+id/textView23"
+                            android:layout_below="@+id/txt_details3"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/material_blue_grey_80"
+                            android:padding="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="12-07-2016"
+                            android:id="@+id/txt_created_at"
+                            android:layout_below="@+id/include3"
+                            android:layout_toRightOf="@+id/txt_details3"
+                            android:layout_toEndOf="@+id/txt_details3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="End Date"
+                            android:id="@+id/textView8"
+                            android:layout_below="@+id/txt_created_at"
+                            android:layout_alignLeft="@+id/include3"
+                            android:layout_alignStart="@+id/include3"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/material_blue_grey_80"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="13-07-2016"
+                            android:id="@+id/txt_end_date"
+                            android:layout_below="@+id/textView23"
+                            android:layout_alignRight="@+id/txt_created_at"
+                            android:layout_alignEnd="@+id/txt_created_at" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Type"
+                            android:id="@+id/textView10"
+                            android:layout_below="@+id/textView8"
+                            android:layout_alignLeft="@+id/textView8"
+                            android:layout_alignStart="@+id/textView8"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/material_blue_grey_80"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Daily"
+                            android:id="@+id/txt_subject_type"
+                            android:layout_below="@+id/textView8"
+                            android:layout_alignLeft="@+id/txt_end_date"
+                            android:layout_alignStart="@+id/txt_end_date" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+            <!--Homework Attachment-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:padding="8dp"
+                android:layout_below="@+id/linearLayout3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/linearLayout4"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cv4"
+                    card_view:cardElevation="2dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_details4"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Attactment"
+                            android:layout_alignParentTop="true"
+                            android:textColor="@color/black_color"
+                            android:padding="10dp" />
+
+                        <include
+                            layout="@layout/item_divider"
+                            android:layout_height="1dp"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/txt_details4"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/include2" />
+
+                        <android.support.v7.widget.AppCompatButton
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="View"
+                            android:id="@+id/btn_view_attachment"
+                            android:layout_below="@+id/include2"
+                            android:layout_alignLeft="@+id/include2"
+                            android:layout_alignStart="@+id/include2"
+                            android:drawableRight="@drawable/ic_visibility_black_24dp"
+                            android:drawablePadding="10dp"/>
+
+                        <android.support.v7.widget.AppCompatButton
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Download"
+                            android:id="@+id/btn_download_attachment"
+                            android:layout_alignTop="@+id/btn_view_attachment"
+                            android:layout_toRightOf="@+id/btn_view_attachment"
+                            android:layout_toEndOf="@+id/btn_view_attachment"
+                            android:drawableRight="@drawable/ic_file_download_black_24dp"
+                            android:drawablePadding="10dp"/>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <ProgressBar
+                android:id="@+id/prgBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="false"
+                android:layout_marginBottom="238dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="24dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:focusableInTouchMode="true"
+        android:id="@+id/apply_leave_linear_layout">
+
+        <!-- Apply Leave Detials Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColorHint="@color/hint">
+            <EditText android:id="@+id/input_apply_leave_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:hint="Leave Details"
+                android:textColor="@color/black_color"
+                android:fontFamily="sans-serif"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Type of Leave Label -->
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinner_type_of_leave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type of Leave"
+            android:textColorHint="@color/hint"
+            app:met_floatingLabel="normal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+
+
+        <!--Leave From Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColorHint="@color/hint"
+            android:focusable="false">
+            <EditText android:id="@+id/input_leave_from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Leave From"
+                android:textColor="@color/black_color"
+                android:fontFamily="sans-serif"
+                android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:editable="false"
+                android:focusable="false"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Leave Till Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColorHint="@color/hint"
+            android:focusable="false">
+            <EditText android:id="@+id/input_leave_till"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Leave Till"
+                android:textColor="@color/black_color"
+                android:fontFamily="sans-serif"
+                android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:editable="false"
+                android:focusable="false"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <!--Attach Document Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColorHint="@color/hint"
+            android:focusable="false">
+            <EditText android:id="@+id/input_attach_doc_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Attach Document"
+                android:textColor="@color/black_color"
+                android:fontFamily="sans-serif"
+                android:drawableRight="@drawable/ic_attachment_black_24dp"
+                android:editable="false"
+                android:focusable="false"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <!-- Signup Button -->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:padding="18dp"
+            android:text="Submit"
+            android:fontFamily="sans-serif"/>
+
+    </LinearLayout>
+</ScrollView>
